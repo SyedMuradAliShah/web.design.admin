@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashbaord">
+      <nav class="sidebar" id="sidebar">
+        <button class="close-button" id="close-button">
+          <i class="fa-regular fa-circle-xmark text-dark"></i>
+        </button>
+        <div class="sidebar-header mb-4 text-center">
+          <svg
+            viewBox="0 0 24 24"
+            width="60px"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                opacity="0.5"
+                d="M9.60601 5.5625C10.3721 5.5625 10.5197 5.40636 12 5.40636C13.4804 5.40636 13.6279 5.5625 14.394 5.5625C15.0324 5.5625 16.9477 4.00011 17.9053 4.00011C18.8629 4.00011 19.9801 4.56261 19.9801 6.18761V8.0625C19.9781 8.55469 19.7993 10.0634 19.0993 9.66022C20.2113 10.9744 19.98 12.5815 19.9801 14C19.9801 17.9062 14.7132 19 12 19C9.28677 19 4.01994 17.9062 4.01994 14C4.01995 12.5815 3.78875 10.9744 4.90066 9.66022C4.20072 10.0634 4.02188 8.55469 4.01995 8.0625V6.1875C4.01995 4.5625 5.13715 4 6.09476 4C7.05236 4 8.9676 5.5625 9.60601 5.5625Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                d="M9.01622 11.0625C8.52738 11.0625 8.20149 11.38 8.03646 11.6464C7.86433 11.9243 7.78235 12.2612 7.78235 12.5938C7.78235 12.9263 7.86433 13.2632 8.03646 13.5411C8.20149 13.8075 8.52738 14.125 9.01622 14.125C9.50506 14.125 9.83095 13.8075 9.99598 13.5411C10.1681 13.2632 10.2501 12.9263 10.2501 12.5938C10.2501 12.2612 10.1681 11.9243 9.99598 11.6464C9.83095 11.38 9.50506 11.0625 9.01622 11.0625Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                d="M14.0365 11.6464C14.2015 11.38 14.5274 11.0625 15.0162 11.0625C15.5051 11.0625 15.831 11.38 15.996 11.6464C16.1681 11.9243 16.2501 12.2612 16.2501 12.5938C16.2501 12.9263 16.1681 13.2632 15.996 13.5411C15.831 13.8075 15.5051 14.125 15.0162 14.125C14.5274 14.125 14.2015 13.8075 14.0365 13.5411C13.8643 13.2632 13.7823 12.9263 13.7823 12.5938C13.7823 12.2612 13.8643 11.9243 14.0365 11.6464Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.1782 14.0797C11.4305 13.9819 11.7282 13.9375 12.0194 13.9375C12.3107 13.9375 12.6083 13.9819 12.8607 14.0797C12.9844 14.1276 13.1358 14.2032 13.2691 14.3254C13.403 14.448 13.5759 14.675 13.5759 15C13.5759 15.325 13.403 15.552 13.2691 15.6746C13.1358 15.7968 12.9844 15.8724 12.8607 15.9203C12.6083 16.0181 12.3107 16.0625 12.0194 16.0625C11.7282 16.0625 11.4305 16.0181 11.1782 15.9203C11.0545 15.8724 10.9031 15.7968 10.7697 15.6746C10.6359 15.552 10.463 15.325 10.463 15C10.463 14.675 10.6359 14.448 10.7697 14.3254C10.9031 14.2032 11.0545 14.1276 11.1782 14.0797Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                d="M17.8634 13.375C17.8634 12.9608 18.1992 12.625 18.6134 12.625C18.9091 12.625 19.2636 12.6924 19.594 12.7737C19.9387 12.8585 20.3134 12.9729 20.6705 13.095C21.3544 13.3289 22.0797 13.6271 22.4074 13.8387C22.7553 14.0634 22.8552 14.5277 22.6305 14.8756C22.4058 15.2236 21.9415 15.3235 21.5936 15.0988C21.4374 14.9979 20.8723 14.7493 20.1852 14.5144C19.8569 14.4021 19.526 14.3017 19.2356 14.2302C18.9309 14.1553 18.7208 14.125 18.6134 14.125C18.1992 14.125 17.8634 13.7892 17.8634 13.375Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                d="M17.9679 15.125C17.5536 15.125 17.2179 15.4608 17.2179 15.875C17.2179 16.2892 17.5536 16.625 17.9679 16.625C18.1741 16.625 18.5175 16.7402 18.9481 16.9678C19.2901 17.1485 19.6038 17.3533 19.8491 17.5134C19.8952 17.5435 19.9393 17.5723 19.9803 17.5988C20.3283 17.8235 20.7925 17.7236 21.0173 17.3756C21.242 17.0277 21.1421 16.5634 20.7941 16.3387C20.761 16.3173 20.7232 16.2926 20.6812 16.2652C20.4388 16.1067 20.0586 15.8581 19.6489 15.6416C19.1925 15.4004 18.5681 15.125 17.9679 15.125Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                d="M3.81532 14.5144C3.12823 14.7493 2.5632 14.9979 2.40698 15.0988C2.05903 15.3235 1.59478 15.2236 1.37006 14.8756C1.14534 14.5277 1.24524 14.0634 1.5932 13.8387C1.92085 13.6271 2.64614 13.3289 3.33003 13.095C3.68718 12.9729 4.0619 12.8585 4.4066 12.7737C4.73696 12.6924 5.09144 12.625 5.38719 12.625C5.80141 12.625 6.13719 12.9608 6.13719 13.375C6.13719 13.7892 5.80141 14.125 5.38719 14.125C5.27973 14.125 5.06968 14.1553 4.76496 14.2302C4.47458 14.3017 4.14365 14.4021 3.81532 14.5144Z"
+                fill="#7367f0"
+              ></path>
+              <path
+                d="M4.02026 17.5988C4.06139 17.5722 4.10522 17.5436 4.15147 17.5134C4.3968 17.3533 4.71048 17.1485 5.05248 16.9678C5.48313 16.7402 5.82654 16.625 6.03273 16.625C6.44695 16.625 6.78273 16.2892 6.78273 15.875C6.78273 15.4608 6.44695 15.125 6.03273 15.125C5.43247 15.125 4.80813 15.4004 4.35169 15.6416C3.94197 15.8581 3.56178 16.1067 3.31938 16.2652C3.27751 16.2925 3.23956 16.3174 3.20648 16.3387C2.85852 16.5634 2.75862 17.0277 2.98334 17.3756C3.20806 17.7236 3.67231 17.8235 4.02026 17.5988Z"
+                fill="#7367f0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <ul class="sidebar-menu p-0">
+          <li>
+            <a
+              href="./index.html"
+              class="active d-flex align-items-center gap-2"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="22px"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M3 3h8v10H3V3zm2 2v6h4V5H5zm8-2h8v6h-8V3zm2 2v2h4V5h-4zm-2 6h8v10h-8V11zm2 2v6h4v-6h-4zM3 15h8v6H3v-6zm2 2v2h4v-2H5z"
+                  ></path>
+                </g>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html">My Profile</a>
+          </li>
+          <li class="dropdown">
+            <a
+              href="javascript:void(0);"
+              class="dropdown-toggle d-flex align-items-center gap-2"
+            >
+              Emails
+              <i class="fa fa-chevron-down ms-auto"></i>
+            </a>
+            <ul class="dropdown-menu p-0">
+              <li><a href="./emails.html">All Emails</a></li>
+              <li><a href="./sent.html">Sent Emails</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a
+              href="javascript:void(0);"
+              class="dropdown-toggle d-flex align-items-center gap-2"
+            >
+              Spam Filters
+              <i class="fa fa-chevron-down ms-auto"></i>
+            </a>
+            <ul class="dropdown-menu p-0">
+              <li><a href="./filters.html">All Filters</a></li>
+              <li><a href="./createfilter.html">Create New Filter</a></li>
+            </ul>
+          </li>
+          <li><a href="./tickets.html">Support Tickets</a></li>
+          <li><a href="./changepassword.html">Change Password</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <div
+          class="content-header d-flex justify-content-between justify-content-lg-end align-items-center p-3 m-3"
+        >
+          <button class="toggle-button" id="toggle-button">
+            <i class="fa-solid fa-bars text-dark"></i>
+          </button>
+          <div class="d-flex align-items-center gap-4">
+            <div class="changetheme">
+              <!-- Sun Icon with black fill -->
+              <svg
+                viewBox="0 0 24 24"
+                width="25px"
+                style="cursor: pointer"
+                id="fa-sun"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.25 22C7.25 21.5858 7.58579 21.25 8 21.25H16C16.4142 21.25 16.75 21.5858 16.75 22C16.75 22.4142 16.4142 22.75 16 22.75H8C7.58579 22.75 7.25 22.4142 7.25 22Z"
+                    fill="#000000"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V3C12.75 3.41421 12.4142 3.75 12 3.75C11.5858 3.75 11.25 3.41421 11.25 3V2C11.25 1.58579 11.5858 1.25 12 1.25ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H3C3.41421 11.25 3.75 11.5858 3.75 12C3.75 12.4142 3.41421 12.75 3 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM20.25 12C20.25 11.5858 20.5858 11.25 21 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H21C20.5858 12.75 20.25 12.4142 20.25 12Z"
+                    fill="#000000"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.08267 15.25H2C1.58579 15.25 1.25 15.5858 1.25 16C1.25 16.4142 1.58579 16.75 2 16.75H22C22.4142 16.75 22.75 16.4142 22.75 16C22.75 15.5858 22.4142 15.25 22 15.25H17.9173H6.08267Z"
+                    fill="#000000"
+                  ></path>
+                  <path
+                    opacity="0.5"
+                    d="M4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19Z"
+                    fill="#000000"
+                  ></path>
+                  <g opacity="0.5">
+                    <path
+                      d="M4.39838 4.39838C4.69127 4.10549 5.16615 4.10549 5.45904 4.39838L5.85188 4.79122C6.14477 5.08411 6.14477 5.55898 5.85188 5.85188C5.55898 6.14477 5.08411 6.14477 4.79122 5.85188L4.39838 5.45904C4.10549 5.16615 4.10549 4.69127 4.39838 4.39838Z"
+                      fill="#000000"
+                    ></path>
+                    <path
+                      d="M19.6009 4.39864C19.8938 4.69153 19.8938 5.16641 19.6009 5.4593L19.2081 5.85214C18.9152 6.14503 18.4403 6.14503 18.1474 5.85214C17.8545 5.55924 17.8545 5.08437 18.1474 4.79148L18.5402 4.39864C18.8331 4.10575 19.308 4.10575 19.6009 4.39864Z"
+                      fill="#000000"
+                    ></path>
+                  </g>
+                  <path
+                    opacity="0.5"
+                    d="M5.25 12C5.25 13.1778 5.5521 14.2858 6.08267 15.25H17.9173C18.4479 14.2858 18.75 13.1778 18.75 12C18.75 8.27208 15.7279 5.25 12 5.25C8.27208 5.25 5.25 8.27208 5.25 12Z"
+                    fill="#000000"
+                  ></path>
+                </g>
+              </svg>
+
+              <!-- Moon Icon with black fill -->
+              <svg
+                viewBox="0 0 24 24"
+                width="25px"
+                id="fa-moon"
+                style="display: none; cursor: pointer"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.25 16C1.25 15.5858 1.58579 15.25 2 15.25H22C22.4142 15.25 22.75 15.5858 22.75 16C22.75 16.4142 22.4142 16.75 22 16.75H2C1.58579 16.75 1.25 16.4142 1.25 16ZM7.25 22C7.25 21.5858 7.58579 21.25 8 21.25H16C16.4142 21.25 16.75 21.5858 16.75 22C16.75 22.4142 16.4142 22.75 16 22.75H8C7.58579 22.75 7.25 22.4142 7.25 22Z"
+                    fill="#ffffff"
+                  ></path>
+                  <path
+                    opacity="0.5"
+                    d="M4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19Z"
+                    fill="#ffffff"
+                  ></path>
+                  <path
+                    opacity="0.5"
+                    d="M12 2C6.47715 2 2 6.47715 2 12C2 13.4222 2.2969 14.7751 2.83209 16H21.1679C21.7031 14.7751 22 13.4222 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2Z"
+                    fill="#ffffff"
+                  ></path>
+                  <path
+                    d="M19.9001 2.30719C19.7392 1.8976 19.1616 1.8976 19.0007 2.30719L18.5703 3.40247C18.5212 3.52752 18.4226 3.62651 18.298 3.67583L17.2067 4.1078C16.7986 4.26934 16.7986 4.849 17.2067 5.01054L18.298 5.44252C18.4226 5.49184 18.5212 5.59082 18.5703 5.71587L19.0007 6.81115C19.1616 7.22074 19.7392 7.22074 19.9001 6.81116L20.3305 5.71587C20.3796 5.59082 20.4782 5.49184 20.6028 5.44252L21.6941 5.01054C22.1022 4.849 22.1022 4.26934 21.6941 4.1078L20.6028 3.67583C20.4782 3.62651 20.3796 3.52752 20.3305 3.40247L19.9001 2.30719Z"
+                    fill="#ffffff"
+                  ></path>
+                  <path
+                    d="M16.0328 8.12967C15.8718 7.72009 15.2943 7.72009 15.1333 8.12967L14.9764 8.52902C14.9273 8.65407 14.8287 8.75305 14.7041 8.80237L14.3062 8.95987C13.8981 9.12141 13.8981 9.70107 14.3062 9.86261L14.7041 10.0201C14.8287 10.0694 14.9273 10.1684 14.9764 10.2935L15.1333 10.6928C15.2943 11.1024 15.8718 11.1024 16.0328 10.6928L16.1897 10.2935C16.2388 10.1684 16.3374 10.0694 16.462 10.0201L16.8599 9.86261C17.268 9.70107 17.268 9.12141 16.8599 8.95987L16.462 8.80237C16.3374 8.75305 16.2388 8.65407 16.1897 8.52902L16.0328 8.12967Z"
+                    fill="#ffffff"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="notifications">
+              <div class="dropdown">
+                <button
+                  class="dropdown-toggle p-0 border-0 position-relative"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                <div class="badge position-absolute">02</div>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="25px"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        opacity="0.5"
+                        d="M18.7491 9V9.7041C18.7491 10.5491 18.9903 11.3752 19.4422 12.0782L20.5496 13.8012C21.5612 15.3749 20.789 17.5139 19.0296 18.0116C14.4273 19.3134 9.57274 19.3134 4.97036 18.0116C3.21105 17.5139 2.43882 15.3749 3.45036 13.8012L4.5578 12.0782C5.00972 11.3752 5.25087 10.5491 5.25087 9.7041V9C5.25087 5.13401 8.27256 2 12 2C15.7274 2 18.7491 5.13401 18.7491 9Z"
+                      ></path>
+                      <path
+                        d="M7.24316 18.5454C7.8941 20.5506 9.77767 22.0002 11.9998 22.0002C14.222 22.0002 16.1055 20.5506 16.7565 18.5454C13.611 19.1357 10.3886 19.1357 7.24316 18.5454Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+                <ul
+                  class="dropdown-menu position-absolute p-0 overflow-hidden border-0 shadow-sm"
+                >
+                  <li>
+                    <a class="dropdown-item py-3" href="#">
+                      <p class="mb-0 small fw-bold">Lorem ipsum dolor sit...</p>
+                      <p class="small mb-0">
+                        A magnam illo maxime error animi est..
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-3" href="#">
+                      <p class="mb-0 small fw-bold">Lorem ipsum dolor sit...</p>
+                      <p class="small mb-0">
+                        A magnam illo maxime error animi est..
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-3" href="#">
+                      <p class="mb-0 small fw-bold">Lorem ipsum dolor sit...</p>
+                      <p class="small mb-0">
+                        A magnam illo maxime error animi est..
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="dropdown">
+                <button
+                  class="dropdown-toggle p-0 border-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    width="25px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <circle cx="12" cy="6" r="4"></circle>
+                      <path
+                        opacity="0.5"
+                        d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+                <ul class="dropdown-menu position-absolute border-0 shadow-sm">
+                  <li>
+                    <a class="dropdown-item mb-2" href="#"
+                      ><i class="fa-regular fa-user"></i> Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item mb-2" href="#"
+                      ><i class="fa-solid fa-gear"></i> Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="fa-solid fa-power-off"></i> Log Out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content px-4 mt-4">
+          <h1 class="fs-5">Admin Panel</h1>
+          <div class="wrapper mt-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+              <div class="col mb-4">
+                <div class="cardbox box1 p-4 position-relative rounded-3">
+                  <h6 class="">All Users</h6>
+                  <h5 class="fw-bold">150</h5>
+                  <div
+                    class="icon d-flex justify-content-center align-items-center"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      width="40px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <circle cx="12" cy="6" r="4"></circle>
+                        <path
+                          opacity="0.5"
+                          d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                <div class="cardbox box2 p-4 position-relative rounded-3">
+                  <h6 class="">All Blogs</h6>
+                  <h5 class="fw-bold">100</h5>
+                  <div
+                    class="icon d-flex justify-content-center align-items-center"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      width="40px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          opacity="0.5"
+                          d="M4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V10C21 6.22876 21 4.34315 19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157Z"
+                        ></path>
+                        <path
+                          d="M6 12C6 10.5858 6 9.87868 6.43934 9.43934C6.87868 9 7.58579 9 9 9H15C16.4142 9 17.1213 9 17.5607 9.43934C18 9.87868 18 10.5858 18 12V16C18 17.4142 18 18.1213 17.5607 18.5607C17.1213 19 16.4142 19 15 19H9C7.58579 19 6.87868 19 6.43934 18.5607C6 18.1213 6 17.4142 6 16V12Z"
+                        ></path>
+                        <path
+                          d="M7 5.25C6.58579 5.25 6.25 5.58579 6.25 6C6.25 6.41421 6.58579 6.75 7 6.75H12C12.4142 6.75 12.75 6.41421 12.75 6C12.75 5.58579 12.4142 5.25 12 5.25H7Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                <div class="cardbox box3 p-4 position-relative rounded-3">
+                  <h6 class="">All Testmonials</h6>
+                  <h5 class="fw-bold">143</h5>
+                  <div
+                    class="icon d-flex justify-content-center align-items-center"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="40px"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          opacity="0.5"
+                          d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H16C16.4142 11.25 16.75 11.5858 16.75 12C16.75 12.4142 16.4142 12.75 16 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.25 8C7.25 7.58579 7.58579 7.25 8 7.25H16C16.4142 7.25 16.75 7.58579 16.75 8C16.75 8.41421 16.4142 8.75 16 8.75H8C7.58579 8.75 7.25 8.41421 7.25 8Z"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.25 16C7.25 15.5858 7.58579 15.25 8 15.25H13C13.4142 15.25 13.75 15.5858 13.75 16C13.75 16.4142 13.4142 16.75 13 16.75H8C7.58579 16.75 7.25 16.4142 7.25 16Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                <div class="cardbox box4 p-4 position-relative rounded-3">
+                  <h6 class="">All Projects</h6>
+                  <h5 class="fw-bold">109</h5>
+                  <div
+                    class="icon d-flex justify-content-center align-items-center"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="40px"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M7.62442 4.4489C9.50121 3.69796 10.6208 3.25 12 3.25C13.3792 3.25 14.4988 3.69796 16.3756 4.4489L19.3451 5.6367C20.2996 6.01851 21.0728 6.32776 21.6035 6.60601C21.8721 6.74683 22.1323 6.90648 22.333 7.09894C22.5392 7.29668 22.75 7.59658 22.75 8C22.75 8.40342 22.5392 8.70332 22.333 8.90106C22.1323 9.09352 21.8721 9.25317 21.6035 9.39399C21.0728 9.67223 20.2996 9.98148 19.3451 10.3633L16.3756 11.5511C14.4988 12.302 13.3792 12.75 12 12.75C10.6208 12.75 9.50121 12.302 7.62443 11.5511L4.65495 10.3633C3.70037 9.98149 2.9272 9.67223 2.39647 9.39399C2.12786 9.25317 1.86765 9.09352 1.66701 8.90106C1.46085 8.70332 1.25 8.40342 1.25 8C1.25 7.59658 1.46085 7.29668 1.66701 7.09894C1.86765 6.90648 2.12786 6.74683 2.39647 6.60601C2.92721 6.32776 3.70037 6.01851 4.65496 5.63669L7.62442 4.4489Z"
+                          
+                        ></path>
+                        <path
+                          opacity="0.7"
+                          d="M2.50248 11.4432L2.49899 11.4402C2.19062 11.1654 1.71762 11.1915 1.44158 11.4992C1.16499 11.8075 1.19103 12.282 1.49936 12.5586C1.49936 12.5586 1.49905 12.5583 1.99987 12L1.49936 12.5586L1.50044 12.5595L1.5022 12.5611L1.50682 12.5652L1.52052 12.5772C1.53164 12.5868 1.54671 12.5997 1.56573 12.6155C1.60379 12.6473 1.65768 12.6911 1.72743 12.745C1.86692 12.8528 2.06992 13.001 2.33649 13.1739C2.86958 13.5196 3.65745 13.9644 4.70015 14.3814L7.50862 15.5048L7.62429 15.5511C9.50108 16.302 10.6206 16.75 11.9999 16.75C13.3791 16.75 14.4987 16.302 16.3754 15.5511L16.4911 15.5048L19.2996 14.3814C20.3423 13.9644 21.1302 13.5196 21.6632 13.1739C21.9298 13.001 22.1328 12.8528 22.2723 12.745C22.3421 12.6911 22.3959 12.6473 22.434 12.6155C22.453 12.5997 22.4681 12.5868 22.4792 12.5772L22.4929 12.5652L22.4975 12.5611L22.4993 12.5595L22.5007 12.5583C22.809 12.2817 22.8347 11.8075 22.5582 11.4992C22.2821 11.1915 21.8093 11.1652 21.501 11.44L21.4993 11.4415L21.4973 11.4432C21.4929 11.4471 21.4846 11.4541 21.4726 11.4641C21.4486 11.4842 21.4094 11.5161 21.3551 11.5581C21.2463 11.6422 21.077 11.7663 20.8471 11.9154C20.3872 12.2136 19.6857 12.6115 18.7425 12.9887L15.934 14.1121C13.9092 14.922 13.0603 15.25 11.9999 15.25C10.9395 15.25 10.0905 14.922 8.06571 14.1121L5.25724 12.9887C4.31406 12.6115 3.61251 12.2136 3.15267 11.9154C2.92276 11.7663 2.7534 11.6422 2.64465 11.5581C2.59029 11.5161 2.5511 11.4842 2.52709 11.4641C2.51509 11.4541 2.50689 11.4471 2.50248 11.4432Z"
+                          
+                        ></path>
+                        <path
+                          opacity="0.4"
+                          d="M2.49883 15.4991C2.19045 15.2243 1.71762 15.2506 1.44158 15.5583C1.16499 15.8666 1.19103 16.3411 1.49936 16.6177L1.50044 16.6186L1.5022 16.6202L1.50682 16.6243L1.52052 16.6362C1.53164 16.6459 1.54671 16.6587 1.56573 16.6746C1.60379 16.7064 1.65768 16.7502 1.72743 16.8041C1.86692 16.9119 2.06992 17.0601 2.33649 17.233C2.86958 17.5787 3.65745 18.0234 4.70015 18.4405L7.50862 19.5639L7.62429 19.6102C9.50108 20.3611 10.6206 20.8091 11.9999 20.8091C13.3791 20.8091 14.4987 20.3611 16.3754 19.6102L16.4911 19.5639L19.2996 18.4405C20.3423 18.0234 21.1302 17.5787 21.6632 17.233C21.9298 17.0601 22.1328 16.9119 22.2723 16.8041C22.3421 16.7502 22.3959 16.7064 22.434 16.6746C22.453 16.6587 22.4681 16.6459 22.4792 16.6362L22.4929 16.6243L22.4975 16.6202L22.4993 16.6186L22.5007 16.6174C22.809 16.3408 22.8347 15.8666 22.5582 15.5583C22.2821 15.2506 21.8093 15.2243 21.501 15.4991L21.4993 15.5005L21.4973 15.5023C21.4929 15.5061 21.4846 15.5132 21.4726 15.5232C21.4486 15.5432 21.4094 15.5752 21.3551 15.6172C21.2463 15.7013 21.077 15.8254 20.8471 15.9745C20.3872 16.2727 19.6857 16.6705 18.7425 17.0478L15.934 18.1712C13.9092 18.9811 13.0603 19.3091 11.9999 19.3091C10.9395 19.3091 10.0905 18.9811 8.06571 18.1712L5.25724 17.0478C4.31406 16.6705 3.61251 16.2727 3.15267 15.9745C2.92276 15.8254 2.7534 15.7013 2.64465 15.6172C2.59029 15.5752 2.5511 15.5432 2.52709 15.5232C2.51509 15.5132 2.50689 15.5061 2.50248 15.5023L2.49883 15.4991Z"
+                          
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="chart-box pt-5 p-3 rounded-4 shadow-sm h-100">
+                  <h5 class="mb-4 text-center fw-bold">Total Projects</h5>
+                
+                <div id="chart"></div>
+              </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="chart-box pt-5 p-3 rounded-4 shadow-sm h-100">
+                <h5 class="mb-4 text-center fw-bold">Total Projects</h5>
+                <div
+                  id="donutchart"
+                  
+                ></div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/javascript/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".js-example-basic-single").select2();
+      });
+    </script>
+  </body>
+</html>

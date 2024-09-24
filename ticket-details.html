@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - My tickets</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+</head>
+<body>
+    <div class="dashbaord">
+        <nav class="sidebar" id="sidebar">
+          <button class="close-button" id="close-button"><i class="fa-regular fa-circle-xmark"></i></button>
+            <div class="sidebar-header">
+                <h2>Dashboard</h2>
+            </div>
+            <ul class="sidebar-menu p-0">
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./profile.html">My Profile</a></li>
+                <li><a href="./emails.html" >My Emails</a></li>
+                <li><a href="./filters.html">Spam Filters</a></li>
+                <li><a href="./tickets.html" class="active">Support Tickets</a></li>
+                <li><a href="./changepassword.html">Change Password</a></li>
+            </ul>
+            <a href="../login.html" class="position-absolute logout-btn text-decoration-none text-capitalize d-flex justify-content-between align-items-center">logout <i class="fa-solid fa-right-from-bracket"></i></a>
+        </nav>
+        <div class="main-content">
+            <div class="content-header d-flex justify-content-between align-items-center py-4 px-3">
+              <button class="toggle-button" id="toggle-button"><i class="fa-solid fa-bars"></i></button>
+                <a href="../index.html" class="text-decoration-none bg-white py-2 px-3 rounded-pill"><i class="fa-solid fa-house"></i> Back to home</a>
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox" />
+                    <label for="checkbox" id="toggleTheme" class="checkbox-label">
+                      <i class="fas fa-moon"></i>
+                      <i class="fas fa-sun"></i>
+                      <span class="ball"></span>
+                    </label>
+                  </div>
+            </div>
+            <div class="content px-4">
+                <h1 class="fs-3 mt-5 border-bottom pb-2 mb-4">Ticket - NM234-5</h1>
+                <div class="ticket-details py-4 mb-4">
+                    <h2 class="fs-4 border-bottom px-4 pb-4 mb-0">Emails</h2>
+                    <div class="message p-4">
+                        <div class="mb-3 d-flex gap-4 align-items-center justify-content-between">
+                        <div class="d-flex gap-4 align-items-center">
+                            <h3 class="fs-5 mb-0">Sulaiman Khan</h3>
+                        <p class="mb-0 small ">20 hours ago</p>
+                        </div>
+                        <a href="#reply-form" class="text-black-50 text-decoration-none"><i class="fa-solid fa-reply-all me-2"></i>Reply</a>
+                    </div>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, autem?
+                        </p>
+                    </div>
+                    <div class="reply p-4 mx-5">
+                        <div class="mb-3 d-flex gap-4 align-items-center">
+                            <h3 class="fs-5 mb-0">Murad Khan</h3>
+                        <p class="mb-0 small ">10 hours ago</p>
+                        </div>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, autem?
+                        </p>
+                    </div>
+                </div>
+                <div class="ticket-details py-4" id="reply-form">
+                    <h2 class="fs-4 border-bottom px-4 pb-4 mb-0">Your Answer</h2>
+                    <form action="" class="p-5">
+                        <textarea name="answer" id="" rows="6" class="w-100 p-3 border rounded-3 outline-none"></textarea>
+                        <button type="submit" class="primary-btn py-3 px-4 text-white mt-3">Submit Reply</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('.js-example-basic-single').select2();
+      });
+  </script>
+</body>
+</html>

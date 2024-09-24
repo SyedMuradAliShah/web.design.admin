@@ -1,0 +1,11 @@
+login---------> remember me checkbox, forgot link
+
+dasboard page
+profile page
+table
+  1-search
+  2- empty box with button
+  3- empty box with out button
+bread crumbs
+badges
+light dark mode

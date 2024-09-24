@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - My profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+</head>
+<body>
+    <div class="dashbaord">
+        <nav class="sidebar position-relative" id="sidebar">
+          <button class="close-button" id="close-button"><i class="fa-regular fa-circle-xmark"></i></button>
+            <div class="sidebar-header">
+                <h2>Dashboard</h2>
+            </div>
+            <ul class="sidebar-menu p-0">
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./profile.html" class="active">My Profile</a></li>
+                <li><a href="./emails.html" >My Emails</a></li>
+                <li><a href="./filters.html">Spam Filters</a></li>
+                <li><a href="./tickets.html">Support Tickets</a></li>
+                <li><a href="./changepassword.html">Change Password</a></li>
+            </ul>
+            <a href="../login.html" class="position-absolute logout-btn text-decoration-none text-capitalize d-flex justify-content-between align-items-center">logout <i class="fa-solid fa-right-from-bracket"></i></a>
+        </nav>
+        <div class="main-content">
+            <div class="content-header d-flex justify-content-between align-items-center py-4 px-3">
+              <button class="toggle-button" id="toggle-button"><i class="fa-solid fa-bars"></i></button>
+                <a href="../index.html" class="text-decoration-none bg-white py-2 px-3 rounded-pill"><i class="fa-solid fa-house"></i> Back to home</a>
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox" />
+                    <label for="checkbox" id="toggleTheme" class="checkbox-label">
+                      <i class="fas fa-moon"></i>
+                      <i class="fas fa-sun"></i>
+                      <span class="ball"></span>
+                    </label>
+                  </div>
+            </div>
+            <div class="content px-4">
+                <h1 class="fs-3 mt-5 border-bottom pb-2 mb-4">My Profile</h1>
+                <div class="content mt-4">
+                  <div class="row">
+                    <div class="col-md-5 col-lg-3">
+                      <form>
+                        <div class="image-box">
+                          <img id="imagePreview" src="./assets/images/profile.png" alt="Image Preview" />
+                          <!-- Hidden file input -->
+                          <input type="file" id="imageUpload" accept="image/*" style="display:none;" />
+                      
+                          <!-- Custom button to trigger file input -->
+                          <label for="imageUpload" class="custom-file-upload px-3 mt-3 primary-btn py-3 w-100 text-center text-white">
+                              Update Your Profile
+                          </label>
+                      
+                          <!-- Image preview -->
+                        </div>
+                    </form>
+                    
+                    
+                    </div>
+                    <div class="col-md-7 col-lg-9 profile-form">
+                      <form action="" class="p-4">
+                      <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="First" name="firstname" placeholder="First Name">
+                            <label for="First">First Name</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Last" name="lastname" placeholder="Last Name">
+                            <label for="Last">Last Name</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="email">
+                            <label for="email">Email</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="number" name="number" placeholder="Number">
+                            <label for="number">Phone Number</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="Address" name="address" placeholder="Address">
+                          <label for="Address">Address</label>
+                        </div>
+                      </div>
+                      <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="City" name="city" placeholder="City">
+                            <label for="City">City</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Zip" name="zipcode" placeholder="Zip Code">
+                            <label for="Zip">Zip Code</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating mb-3 mb-lg-0">
+                            <input type="text" class="form-control" id="State" name="state" placeholder="State">
+                            <label for="State">State</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating">
+                            <select class="form-select js-example-basic-single" id="floatingSelect" name="country" aria-label="Floating label select example">
+                              <option value="1" selected>Pakistan</option>
+                              <option value="2">India</option>
+                              <option value="3">Canada</option>
+                              <option value="4">England</option>
+                            </select>
+                            <label for="floatingSelect">Select Country</label>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="primary-btn px-4 py-3 mt-4 text-white mx-auto d-block">Update Profile <i class="fa-solid fa-user"></i></button>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('.js-example-basic-single').select2();
+      });
+  </script>
+</body>
+</html>
