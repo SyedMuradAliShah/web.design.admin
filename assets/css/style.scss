@@ -86,7 +86,10 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 10px;
-    fill: var(--text-color);
+    svg{
+        fill: var(--text-color);
+
+    }
 }
 
 .sidebar-menu a:hover {
