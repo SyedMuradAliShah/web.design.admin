@@ -15,15 +15,20 @@
   --gradient:linear-gradient(270deg, rgba(115, 103, 240, 0.7) 0%, #7367f0 100%);
   --shadow:0px 2px 6px 0px rgba(115,103,240,.3);
   --gray:rgb(243, 243, 243);
+  --border-color:#dee2e6;
+  --bs-table-bg:#ffffff !important;
 }
 
 [data-bs-theme=dark] {
-  --primary: #fefefe;
+  --primary: #7367f0;
   --secondary: #0065ad;
   --body-background: #23293c !important;
   --background: #2d3349 !important;
   --text-color: #ffffff;
   --gray:gray;
+  --border-color:#495057;
+  --bs-table-bg:#2d3349 !important;
+  --shadow:0px 2px 6px 0px rgba(115,103,240,.3);
 }
 
 body {
@@ -56,7 +61,6 @@ body {
 
 .dashbaord {
   display: flex;
-  height: 100vh;
 }
 
 /* Sidebar styles */
@@ -78,6 +82,12 @@ body {
 .sidebar .sidebar-menu {
   list-style-type: none;
 }
+.sidebar .sidebar-menu li {
+  margin-bottom: 10px;
+}
+.sidebar .sidebar-menu .open {
+  background-color: var(--body-background) !important;
+}
 .sidebar .sidebar-menu a {
   color: var(--text-color);
   text-decoration: none;
@@ -87,7 +97,6 @@ body {
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 10px;
 }
 .sidebar .sidebar-menu a svg {
   fill: var(--text-color);
@@ -126,9 +135,6 @@ body {
 }
 .sidebar .dropdown.open .dropdown-toggle i {
   transform: rotate(180deg);
-}
-.sidebar .dropdown-menu {
-  background-color: var(--body-background) !important;
 }
 .sidebar .dropdown-menu a:nth-last-child(1) {
   margin-bottom: 0 !important;
@@ -211,20 +217,31 @@ body {
   font-size: 1.3rem;
 }
 
-.login form input {
-  padding: 12px;
-  transition: 0.4s all;
-  padding-left: 37px;
+input {
+  padding: 12px !important;
+  transition: 0.4s all !important;
+  background-color: var(--background) !important;
 }
-.login form input:focus {
-  box-shadow: 0px 5px 10px rgb(237, 237, 237);
+input:focus {
+  box-shadow: var(--shadow) !important;
   border-color: var(--secondary);
 }
-.login form input::-moz-placeholder {
+input::-moz-placeholder {
   font-size: small;
 }
-.login form input::placeholder {
+input::placeholder {
   font-size: small;
+}
+
+.login form input {
+  padding-left: 37px !important;
+}
+.login form .form-check .form-check-input:checked {
+  background-color: #0d6efd !important;
+}
+.login form .form-check input {
+  padding: 8px !important;
+  width: auto;
 }
 .login form i {
   left: 15px;
@@ -297,9 +314,75 @@ body {
   background-color: #06b5d4;
   box-shadow: 0px 0px 0px 13px rgba(6, 181, 212, 0.2509803922);
 }
-
-.chart-box {
+.wrapper .chart-box {
   background-color: var(--background);
+}
+.wrapper .image-box #imagePreview {
+  height: 120px;
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 10px var(--background);
+}
+.wrapper .profile-form form .select2-container .select2-selection--single {
+  background-color: var(--background);
+  height: 48px;
+  border-color: var(--border-color);
+}
+.wrapper .profile-form form .select2-container .select2-selection--single .select2-selection__rendered {
+  line-height: 48px;
+  color: var(--text-color);
+}
+.wrapper .profile-form form .select2-container .select2-selection--single .select2-selection__arrow {
+  height: 46px;
+}
+.wrapper .table-responsive {
+  background-color: var(--background);
+}
+.wrapper .table-responsive .custom-table {
+  background: var(--bs-table-bg) !important;
+}
+.wrapper .table-responsive .custom-table tbody tr {
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px;
+}
+.wrapper .table-responsive .custom-table tbody tr td {
+  padding: 10px;
+}
+.wrapper .table-responsive .custom-table tbody tr:nth-last-child(1) {
+  border-color: transparent !important;
+}
+.wrapper .table-responsive .custom-table tbody tr a {
+  padding: 6px;
+  width: 34px;
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s all;
+}
+.wrapper .table-responsive .custom-table tbody tr a:hover {
+  opacity: 0.5 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.211);
+}
+.wrapper .empty-table {
+  background-color: var(--background);
+}
+.wrapper .empty-table .empty-text {
+  border: 2px dashed var(--border-color);
+  width: 80%;
+}
+
+.content-footer {
+  background-color: var(--background);
+  border-radius: 10px;
+}
+
+.pagination-sec .pagination li a {
+  background-color: var(--background);
+}
+.pagination-sec .pagination li .active {
+  background: var(--gradient) !important;
 }
 
 @media (max-width: 990px) {
