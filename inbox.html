@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - Table</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - inbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="dashbaord">
       <nav class="sidebar" id="sidebar">
         <button class="close-button" id="close-button">
@@ -121,7 +118,7 @@
           </li>
           <li class="dropdown">
             <a
-              class="dropdown-toggle d-flex align-items-center gap-2 mb-0 active"
+              class="dropdown-toggle d-flex align-items-center gap-2 mb-0"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -159,7 +156,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle d-flex align-items-center gap-2">
+            <a class="dropdown-toggle d-flex align-items-center gap-2 active">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -265,8 +262,8 @@
           </li>
         </ul>
       </nav>
-      <div class="main-content">
-        <div
+        <div class="main-content">
+          <div
           class="content-header d-flex justify-content-between justify-content-lg-end align-items-center p-3 m-3"
         >
           <button class="toggle-button" id="toggle-button">
@@ -486,48 +483,77 @@
             </div>
           </div>
         </div>
-        <div class="content px-4">
-          <h1 class="fs-5">Table</h1>
-          <nav
-            style="
-              --bs-breadcrumb-divider: url(
-                &#34;data:image/svg + xml,
-                %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='%236c757d'/%3E%3C/svg%3E&#34;
-              );
-            "
-            aria-label="breadcrumb"
-          >
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item small"><a href="#">Dashboard</a></li>
-              <li class="breadcrumb-item small active" aria-current="page">
-                Table
-              </li>
-            </ol>
-          </nav>
-          <div class="wrapper mt-4">
-            <div class="empty-table py-5 rounded-4">
-              <div class="empty-text text-center p-5 rounded-4 mx-auto">
-                <img
-                  src="./assets/images/data-not-found.png"
-                  width="200px"
-                  alt=""
-                />
-                <h6 class="fw-bold">Nothing Found</h6>
-                <p class="mb-0 small">Currently you don't have any data</p>
+            <div class="content px-4">
+              <h1 class="fs-5">Inbox</h1>
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item small"><a href="./index.html">Dashboard</a></li>
+                  <li class="breadcrumb-item small active" aria-current="page">Inbox</li>
+                </ol>
+              </nav>
+              <div class="wrapper mt-4">
+                <div class="row">
+                        <div class="inbox-header text-end mb-3 d-lg-flex justify-content-between align-items-center rounded-3">
+                          <div class="d-flex gap-3 align-items-center mb-4 mb-lg-0">
+                            <p class="mb-0 small">1 - 50 of 5,238</p>
+                            <button class="bg-danger bg-opacity-10 text-danger border-0 rounded-pill">Delete Selected<i class="fa-solid fa-trash-can small px-1"></i></button>
+                          </div>
+                            <form action="" class="d-flex justify-content-end align-items-center gap-2 position-relative">
+                                <input type="text" class="form-control w-auto py-2 ps-2 pe-4" placeholder="Search....">
+                                <button type="submit" class="position-absolute top-50 end-0 translate-middle-y border-0 bg-transparent "><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    <div class="table-responsive p-0 rounded-3">
+                        <table class="mb-0 custom-table inbox-table w-100">
+                            <tbody>
+                              <tr>
+                                <td scope="row"><div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                </div></td>
+                                <td class="small">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/me.jpg" width="35px" class="rounded-circle" alt="">
+                                        Sulaiman khan
+                                    </div>
+                                </td>
+                                <td ><p class="small text-truncate mb-0 w-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto labore tempora delectus quidem corrupti quo.</p></td>
+                               <td class="small">07 July 2021</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                      <div class="pagination-sec mt-4 text-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link active" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                      </div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/javascript/javascript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="./assets/javascript/bootstrap.bundle.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $(".js-example-basic-single").select2();
+      $(document).ready(function() {
+          $('.js-example-basic-single').select2();
       });
-    </script>
-  </body>
+  </script>
+</body>
 </html>

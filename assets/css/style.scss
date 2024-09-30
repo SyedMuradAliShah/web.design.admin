@@ -152,6 +152,10 @@ body {
 }
 
 
+#close-button{
+    color: var(--primary) !important;
+
+}
 .main-content {
     flex: 2;
     max-width: 83%;
@@ -159,6 +163,9 @@ body {
     .content-header{
         background-color: var(--background);
         border-radius: 10px;
+        #toggle-button{
+            color: var(--primary) !important;
+        }
         .notifications{
             .badge{
                 top: -5px;
@@ -245,20 +252,21 @@ input{
 
     }
 }
+.form-check{
+    .form-check-input:checked{
+        background-color: #0d6efd !important;
+    }
+    input{
+        padding: 8px !important;
+        width: auto;
+    }
+}
 .login {
     form{
         input{
             padding-left: 37px !important;
         }
-        .form-check{
-            .form-check-input:checked{
-                background-color: #0d6efd !important;
-            }
-            input{
-                padding: 8px !important;
-                width: auto;
-            }
-        }
+
         i{
             left: 15px;
             bottom: 19%;
@@ -409,10 +417,35 @@ input{
         li{
             a{
                 background-color: var(--background);
+                &:focus{
+                    box-shadow: var(--shadow);
+                }
+                &:active{
+                    box-shadow: none;
+                }
             }
             .active{
                 background: var(--gradient) !important;
             }
+        }
+    }
+}
+.inbox-header{
+    background-color: var(--background);
+    padding: 12px !important;
+    P{
+        color: var(--text-color);
+    }
+    button{
+        font-size: 0.8rem;
+        padding: 7px 10px;
+        font-weight: 500;
+    }
+}
+.inbox-table{
+    tr{
+        &:nth-last-child(1){
+            color: var(--text-color);
         }
     }
 }
@@ -453,7 +486,7 @@ input{
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .main-content {
         max-width: 100%;
     }
@@ -491,6 +524,17 @@ input{
         }
     }
 }
+@media (min-width: 992px) and (max-width: 5000px) {
+    .main-content {
+        max-width: 100%;
+        flex: 5;
+    }
+    .sidebar{
+        position: sticky;
+        height: 100vh;
+        flex: 1;
+    }
+}
 @media (min-width: 768px) and (max-width: 1000px) {
     .formsec {
         margin-top: -50px;
@@ -503,6 +547,16 @@ input{
                 }
             }
         }
+    }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+    .main-content {
+        max-width: 75%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .main-content {
+        max-width: 79%;
     }
 }
 @media (min-width: 1001px) and (max-width: 1280px) {
