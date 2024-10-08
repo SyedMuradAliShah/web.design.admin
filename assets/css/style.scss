@@ -23,6 +23,16 @@
     --gray: rgb(243, 243, 243);
     --border-color: #dee2e6;
     --bs-table-bg: #ffffff !important;
+    --bs-table-highlight: rgba(0, 0, 0, 0.05) !important;
+
+    --bs-primary-text-emphasis: #408bfb;
+    --bs-secondary-text-emphasis: #8e9398;
+    --bs-success-text-emphasis: #3ab37b;
+    --bs-info-text-emphasis: #3ed3f1;
+    --bs-warning-text-emphasis: #ecc246;
+    --bs-danger-text-emphasis: #eb6772;
+    --bs-light-text-emphasis: #f8f9fa;
+    --bs-dark-text-emphasis: #84898e;
 }
 [data-bs-theme="dark"] {
     --primary: #7367f0;
@@ -36,11 +46,70 @@
     --border-color: #495057;
     --bs-table-bg: #2d3349 !important;
     --shadow: 0px 2px 6px 0px rgba(115, 103, 240, 0.3);
+    --bs-table-highlight: rgba(53, 56, 71, 0.83) !important;
+
+    --bs-primary-text-emphasis: #6ea8fe;
+    --bs-secondary-text-emphasis: #a7acb1;
+    --bs-success-text-emphasis: #75b798;
+    --bs-info-text-emphasis: #6edff6;
+    --bs-warning-text-emphasis: #ffda6a;
+    --bs-danger-text-emphasis: #ea868f;
+    --bs-light-text-emphasis: #f8f9fa;
+    --bs-dark-text-emphasis: #dee2e6;
 }
 body {
     font-family: "Poppins", sans-serif !important;
     background-color: var(--body-background) !important;
 }
+
+.text-primary-emphasis {
+    color: var(--bs-primary-text-emphasis) !important;
+}
+
+.text-success-emphasis {
+    color: var(--bs-success-text-emphasis) !important;
+}
+
+.text-danger-emphasis {
+    color: var(--bs-danger-text-emphasis) !important;
+}
+
+.text-info-emphasis {
+    color: var(--bs-info-text-emphasis) !important;
+}
+
+.text-warning-emphasis {
+    color: var(--bs-warning-text-emphasis) !important;
+}
+
+.text-primary-emphasis {
+    color: var(--bs-primary-text-emphasis) !important;
+}
+
+.text-secondary-emphasis {
+    color: var(--bs-secondary-text-emphasis) !important;
+}
+
+.text-light-emphasis {
+    color: var(--bs-light-text-emphasis) !important;
+}
+
+.text-dark-emphasis {
+    color: var(--bs-dark-text-emphasis) !important;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.user-darg-none{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    pointer-events: none;
+}
+
 .primary-btn {
     background-color: var(--primary);
     border: 0;
@@ -69,6 +138,11 @@ body {
     }
 }
 
+.table-highlight {
+    background-color: var(--bs-table-highlight) !important;
+    color: var(--text-color) !important;
+}
+
 .form-box {
     background-color: var(--background) !important;
 }
@@ -86,19 +160,19 @@ body {
         cursor: pointer;
 
         .image-overlay {
-            display: block;
+            display: flex;
         }
     }
 }
 
 #nprogress {
-    position: fixed !important;  /* Ensure it's fixed on the page */
-    z-index: 9999 !important;  /* High z-index to be above other elements */
+    position: fixed !important; /* Ensure it's fixed on the page */
+    z-index: 9999 !important; /* High z-index to be above other elements */
 }
 
 #nprogress .bar {
-    height: 3px !important;  /* Adjust height as needed */
-    z-index: 9999 !important;  /* Ensure it's on top of other elements */
+    height: 3px !important; /* Adjust height as needed */
+    z-index: 9999 !important; /* Ensure it's on top of other elements */
 }
 
 /* Sidebar styles */
@@ -275,7 +349,8 @@ body {
     right: 20px;
     font-size: 1.3rem;
 }
-input {
+
+.form-control {
     padding: 12px !important;
     transition: 0.4s all !important;
     background-color: var(--background) !important;
@@ -287,6 +362,7 @@ input {
         font-size: small;
     }
 }
+
 .form-check {
     .form-check-input:checked {
         background-color: #0d6efd !important;
@@ -296,30 +372,29 @@ input {
         width: auto;
     }
 }
-.login {
-    form {
-        input {
-            padding-left: 37px !important;
-        }
+.form-field {
+    input {
+        padding-left: 37px !important;
+    }
 
+    .prefix-icon {
+        left: 15px;
+        bottom: 22%;
+        color: rgb(170, 170, 170);
+        font-size: small;
+    }
+    .postfix-icon {
+        right: 15px;
+        bottom: 17% !important;
         i {
-            left: 15px;
-            bottom: 19%;
-            color: rgb(170, 170, 170);
-            font-size: small;
-        }
-        .eye-icon {
-            right: 15px;
-            bottom: 15% !important;
-            i {
-                cursor: pointer;
-                &:hover {
-                    color: #000000;
-                }
+            cursor: pointer;
+            &:hover {
+                color: #000000;
             }
         }
     }
 }
+
 .wrapper {
     .cardbox {
         overflow: hidden;
@@ -425,7 +500,7 @@ input {
                         text-align: center;
                         transition: 0.3s all;
                         &:hover {
-                            opacity: 0.5 !important;
+                            opacity: 0.7 !important;
                             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.211);
                         }
                     }
