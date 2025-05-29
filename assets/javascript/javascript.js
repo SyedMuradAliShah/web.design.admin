@@ -1,36 +1,54 @@
-$(document).ready(function() {
-  // When moon icon is clicked, switch to dark mode and show the sun icon
-  $('#fa-sun').click(function() {
-    $('html').attr('data-bs-theme', 'dark'); // Set theme to dark
-    $('#fa-sun').hide(); // Hide moon icon
-    $('#fa-moon').show();  // Show sun icon
-  });
+$(document).ready(function () {
+  $('.changetheme').each(function () {
+    const $container = $(this);
+    const $sunIcon = $container.find('.icon-sun');
+    const $moonIcon = $container.find('.icon-moon');
 
-  // When sun icon is clicked, switch to light mode and show the moon icon
-  $('#fa-moon').click(function() {
-    $('html').attr('data-bs-theme', 'light'); // Set theme to light
-    $('#fa-moon').hide(); // Hide sun icon
-    $('#fa-sun').show(); // Show moon icon
-  });
-});
+    $sunIcon.on('click', function () {
+      $('html').attr('data-bs-theme', 'dark');
+      $sunIcon.hide();
+      $moonIcon.show();
+    });
 
-$(document).ready(function() {
-  // When eye icon is clicked, show the eye-slash and change input type to text
-  $('#fa-eye').click(function() {
-    $('#fa-eye').hide(); // Hide eye icon
-    $('#fa-eye-slash').show();  // Show eye-slash icon
-    $('#password').attr('type', 'text'); // Change password input to text
-  });
-
-  // When eye-slash icon is clicked, show the eye and change input type back to password
-  $('#fa-eye-slash').click(function() {
-    $('#fa-eye-slash').hide(); // Hide eye-slash icon
-    $('#fa-eye').show(); // Show eye icon
-    $('#password').attr('type', 'password'); // Change input type back to password
+    $moonIcon.on('click', function () {
+      $('html').attr('data-bs-theme', 'light');
+      $moonIcon.hide();
+      $sunIcon.show();
+    });
   });
 });
 
 
+$(document).ready(function () {
+  $('.password-wrapper').each(function () {
+    const $wrapper = $(this);
+    const $input = $wrapper.find('.password-input');
+    const $showIcon = $wrapper.find('.show-password');
+    const $hideIcon = $wrapper.find('.hide-password');
+
+    $showIcon.on('click', function () {
+      $input.attr('type', 'text');
+      $showIcon.hide();
+      $hideIcon.show();
+    });
+
+    $hideIcon.on('click', function () {
+      $input.attr('type', 'password');
+      $hideIcon.hide();
+      $showIcon.show();
+    });
+  });
+});
+
+
+ new Swiper(".swiper", {
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  });
 
 
 document.getElementById('toggle-button').addEventListener('click', function () {
@@ -62,61 +80,11 @@ document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
 
 // sidebar-dropdown
 
-// charts
-var options = {
-  series: [{
-  name: 'series1',
-  data: [31, 40, 28, 51, 42, 109, 100]
-}],
-  chart: {
-  height: 350,
-  type: 'area'
-},
-dataLabels: {
-  enabled: false
-},
-stroke: {
-  curve: 'smooth'
-},
-xaxis: {
-  type: 'datetime',
-  categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-},
-tooltip: {
-  x: {
-    format: 'dd/MM/yy HH:mm'
-  },
-},
-};
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
 
-// charts
-// donutcharts
-var options = {
-  series: [44, 55, 41, 17, 15],
-  chart: {
-    type: 'donut'
-  },
-  labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'], // Labels are required but will be hidden
-  dataLabels: {
-    enabled: false // Hides data labels from the chart itself
-  },
-  legend: {
-    show: false // Hides the legend
-  },
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        width: 200
-      }
-    }
-  }]
-};
 
-var chart = new ApexCharts(document.querySelector("#donutchart"), options);
-chart.render();
 
-// donutcharts
+
+
+
+

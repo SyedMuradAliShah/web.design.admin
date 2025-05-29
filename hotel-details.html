@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Table</title>
-  <link href="./assets/css/select2.min.css" rel="stylesheet" />
+  <title>Dashboard - hotel details</title>
+  <link rel="stylesheet"  href="./assets/css/select2.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./assets/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
 </head>
 
 <body>
@@ -311,19 +312,29 @@
         </div>
       </div>
       <div class="content px-4">
-        <h1 class="fs-5">Table</h1>
+        <h1 class="fs-5">Hotel Details</h1>
         <nav
           style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
           aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item small"><a href="./index.html">Dashboard</a></li>
-            <li class="breadcrumb-item small active" aria-current="page">Table</li>
+            <li class="breadcrumb-item small active" aria-current="page">Hotel Details</li>
           </ol>
         </nav>
         <div class="wrapper mt-4">
-          <div class="row">
-            <div class="table-search d-xl-flex justify-content-between align-items-center mb-3">
-                <ul class="nav nav-pills mb-3 p-2 rounded-3" id="pills-tab" role="tablist">
+          <div class="hotel-details d-lg-flex align-items-center gap-4 mb-5">
+            <div class="hotel-logo rounded-circle p-3 border">
+              <img src="./assets/images/hotel-logo.png" alt="">
+            </div>
+            <div class="hotel-name">
+    <h5 class="fw">King Hotel</h5>
+    <p class="text-muted small mb-0">Experience luxury at its finest with premium rooms, 24/7 service, and stunning views. Located in the heart of the city.Experience luxury at its finest with premium rooms, 24/7 service, and stunning views. Located in the heart of the city.Experience luxury at its finest with premium rooms, 24/7 service, and stunning views. Located in the heart of the city.</p>
+
+            </div>
+          </div>
+  <!-- Search -->
+<div class="table-search d-flex justify-content-between align-items-center mb-3">
+  <ul class="nav nav-pills mb-3 p-2 rounded-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="pills-managers-tab" data-bs-toggle="pill" data-bs-target="#pills-managers" type="button" role="tab" aria-controls="pills-managers" aria-selected="true">Managers</button>
   </li>
@@ -337,16 +348,13 @@
     <button class="nav-link" id="pills-Chef-tab" data-bs-toggle="pill" data-bs-target="#pills-Chef" type="button" role="tab" aria-controls="pills-Chef" aria-selected="false">Chef</button>
   </li>
 </ul>
-<div class="d-md-flex align-items-center gap-3">
-  <button class="primary-btn small py-2 px-4 mb-3 mb-md-0">Add Record</button>
-<form action="" class="d-flex justify-content-md-end align-items-center gap-2 position-relative">
-                <input type="text" class="form-control w-100 py-2 ps-2 pe-4" placeholder="Search....">
+
+              <form action="" class="d-flex justify-content-end align-items-center gap-2 position-relative">
+                <input type="text" class="form-control w-auto py-2 ps-2 pe-4" placeholder="Search....">
                 <button type="submit"
                   class="position-absolute top-50 end-0 translate-middle-y border-0 bg-transparent pe-2"><i
                     class="fa-solid fa-magnifying-glass"></i></button>
               </form>
-</div>
-              
             </div>
             <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-managers" role="tabpanel" aria-labelledby="pills-managers-tab" tabindex="0">
@@ -803,11 +811,13 @@
   <!-- Table -->
   </div>
 </div>
-          </div>
+
+
         </div>
       </div>
     </div>
   </div>
+  <script src="./assets/javascript/swiper.min.js"></script>
   <script src="./assets/javascript/jquery.js"></script>
   <script src="./assets/javascript/javascript.js"></script>
   <script src="./assets/javascript/select2.min.js"></script>

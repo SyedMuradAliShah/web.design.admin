@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="./assets/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/all.min.css" />
@@ -56,15 +56,18 @@
                 <input type="email" class="form-control" id="email" placeholder="example@gmail.com" />
                 <i class="fa-regular fa-envelope position-absolute"></i>
               </div>
-              <div class="mb-4 position-relative">
-                <label for="password" class="form-label mb-3">Password</label>
-                <div class="eye-icon position-absolute">
-                  <i class="fa-solid fa-eye" id="fa-eye" style="cursor: pointer"></i>
-                  <i class="fa-solid fa-eye-slash" id="fa-eye-slash" style="display: none; cursor: pointer"></i>
-                </div>
-                <input type="password" class="form-control" id="password" placeholder="Enter password" />
-                <i class="fa-solid fa-lock position-absolute"></i>
-              </div>
+             <div class="mb-4 position-relative password-wrapper">
+  <label for="password" class="form-label mb-3">Password</label>
+
+  <div class="eye-icon position-absolute">
+    <i class="fa-solid fa-eye show-password" style="cursor: pointer"></i>
+    <i class="fa-solid fa-eye-slash hide-password" style="display: none; cursor: pointer"></i>
+  </div>
+
+  <input type="password" class="form-control password-input" placeholder="Enter password" />
+  <i class="fa-solid fa-lock position-absolute"></i>
+</div>
+
               <div class="d-flex justify-content-between mb-5">
                 <div class="form-check">
                   <input class="form-check-input p-2" type="checkbox" value="" id="Remember">

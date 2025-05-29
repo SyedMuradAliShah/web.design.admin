@@ -42,6 +42,8 @@ body {
   outline: none;
   border-radius: 5px;
   transition: 0.4s all;
+  color: #ffffff;
+  border: 1px solid var(--primary);
 }
 .primary-btn:hover {
   background-color: var(--secondary);
@@ -224,19 +226,19 @@ body {
   font-size: 1.3rem;
 }
 
-input {
+.form-control {
   padding: 12px !important;
   transition: 0.4s all !important;
   background-color: var(--background) !important;
 }
-input:focus {
+.form-control:focus {
   box-shadow: var(--shadow) !important;
   border-color: var(--secondary);
 }
-input::-moz-placeholder {
+.form-control::-moz-placeholder {
   font-size: small;
 }
-input::placeholder {
+.form-control::placeholder {
   font-size: small;
 }
 
@@ -248,7 +250,7 @@ input::placeholder {
   width: auto;
 }
 
-.login form input {
+.login form .form-control {
   padding-left: 37px !important;
 }
 .login form i {
@@ -348,28 +350,28 @@ input::placeholder {
 .wrapper .table-responsive {
   background-color: var(--background);
 }
-.wrapper .table-responsive .custom-table {
+.wrapper .table-responsive table {
   background: var(--bs-table-bg) !important;
 }
-.wrapper .table-responsive .custom-table tbody tr {
+.wrapper .table-responsive table tbody tr {
   vertical-align: middle;
   border-bottom: 1px solid var(--border-color);
   padding: 10px;
 }
-.wrapper .table-responsive .custom-table tbody tr td {
+.wrapper .table-responsive table tbody tr td {
   padding: 10px;
 }
-.wrapper .table-responsive .custom-table tbody tr:nth-last-child(1) {
+.wrapper .table-responsive table tbody tr:nth-last-child(1) {
   border-color: transparent !important;
 }
-.wrapper .table-responsive .custom-table tbody tr a {
+.wrapper .table-responsive table tbody tr a {
   padding: 6px;
   width: 34px;
   display: inline-block;
   text-align: center;
   transition: 0.3s all;
 }
-.wrapper .table-responsive .custom-table tbody tr a:hover {
+.wrapper .table-responsive table tbody tr a:hover {
   opacity: 0.5 !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.211);
 }
@@ -416,6 +418,31 @@ input::placeholder {
   color: var(--text-color);
 }
 
+.hotel-details .hotel-logo {
+  background-color: var(--background);
+}
+.hotel-details .hotel-logo img {
+  width: 100px;
+}
+
+#pills-tab {
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--background);
+}
+#pills-tab .nav-item .active {
+  background-color: var(--primary);
+  font-size: small;
+}
+#pills-tab .nav-item .nav-link {
+  font-size: small;
+}
+
+@media (max-width: 767px) {
+  #pills-tab {
+    width: 100%;
+  }
+}
 @media (max-width: 990px) {
   .sidebar {
     width: 0;
