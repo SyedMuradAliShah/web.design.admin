@@ -36,29 +36,29 @@ body {
   background-color: var(--body-background) !important;
 }
 
-.primary-btn {
-  background-color: var(--primary);
-  border: 0;
-  outline: none;
-  border-radius: 5px;
+.btn-primary {
+  background-color: var(--primary) !important;
+  border: 0 !important;
+  outline: none !important;
+  border-radius: 5px !important;
   transition: 0.4s all;
-  color: #ffffff;
-  border: 1px solid var(--primary);
+  color: #ffffff !important;
+  border: 1px solid var(--primary) !important;
 }
-.primary-btn:hover {
-  background-color: var(--secondary);
+.btn-primary:hover {
+  background-color: var(--secondary) !important;
 }
 
-.secondary-btn {
-  background-color: var(--secondary);
-  border: 0;
-  outline: none;
-  border-radius: 5px;
+.btn-secondary {
+  background-color: var(--secondary) !important;
+  border: 0 !important;
+  outline: none !important;
+  border-radius: 5px !important;
   transition: 0.4s all;
 }
-.secondary-btn:hover {
-  background-color: var(--primary);
-  letter-spacing: 1px;
+.btn-secondary:hover {
+  background-color: var(--primary) !important;
+  letter-spacing: 1px !important;
 }
 
 .dashbaord {
