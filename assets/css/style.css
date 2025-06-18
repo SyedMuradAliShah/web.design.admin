@@ -347,31 +347,14 @@ body {
 .wrapper .profile-form form .select2-container .select2-selection--single .select2-selection__arrow {
   height: 46px;
 }
-.wrapper .table-responsive {
-  background-color: var(--background);
-}
-.wrapper .table-responsive table {
-  background: var(--bs-table-bg) !important;
-}
-.wrapper .table-responsive table tbody tr {
-  vertical-align: middle;
-  border-bottom: 1px solid var(--border-color);
-  padding: 10px;
-}
-.wrapper .table-responsive table tbody tr td {
-  padding: 10px;
-}
-.wrapper .table-responsive table tbody tr:nth-last-child(1) {
-  border-color: transparent !important;
-}
-.wrapper .table-responsive table tbody tr a {
+.wrapper table .icon {
   padding: 6px;
   width: 34px;
   display: inline-block;
   text-align: center;
   transition: 0.3s all;
 }
-.wrapper .table-responsive table tbody tr a:hover {
+.wrapper table .icon:hover {
   opacity: 0.5 !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.211);
 }
@@ -388,16 +371,16 @@ body {
   border-radius: 10px;
 }
 
-.pagination-sec .pagination li a {
+.pagination-sec .pagination .page-item .page-link {
   background-color: var(--background);
 }
-.pagination-sec .pagination li a:focus {
+.pagination-sec .pagination .page-item .page-link:focus {
   box-shadow: var(--shadow);
 }
-.pagination-sec .pagination li a:active {
+.pagination-sec .pagination .page-item .page-link:active {
   box-shadow: none;
 }
-.pagination-sec .pagination li .active {
+.pagination-sec .pagination .page-item .active {
   background: var(--gradient) !important;
 }
 

@@ -371,23 +371,8 @@ body {
             }
         }
     }
-    .table-responsive{
-        background-color: var(--background);
-        table{
-            background: var(--bs-table-bg) !important;
-            tbody{
-
-                tr{
-                    vertical-align: middle;
-                    border-bottom: 1px solid var(--border-color);
-                    padding: 10px;
-                    td{
-                        padding: 10px;
-                    }
-                    &:nth-last-child(1){
-                        border-color: transparent !important;
-                    }
-                    a{
+    table{
+        .icon{
                         padding: 6px;
                         width: 34px;
                         display: inline-block;
@@ -398,10 +383,8 @@ body {
                             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.211);
                         }
                     }
-                }
-            }
-        }
     }
+    
 .empty-table{
     background-color: var(--background);
     .empty-text{
@@ -416,8 +399,8 @@ body {
 }
 .pagination-sec{
     .pagination{
-        li{
-            a{
+        .page-item{
+            .page-link{
                 background-color: var(--background);
                 &:focus{
                     box-shadow: var(--shadow);
